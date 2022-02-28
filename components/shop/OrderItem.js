@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
-
+import Card from '../UI/Card';
 import CartItem from './CartItem';
 import Colors from '../../constants/Colors';
 
@@ -9,7 +9,7 @@ const OrderItem = props => {
 
   console.log(props,'tot');
   return (
-    <View style={styles.orderItem}>
+    <Card style={styles.orderItem}>
       <View style={styles.summary}>
         <Text style={styles.totalAmount}>${props.amount.toFixed(2)}</Text>
         <Text style={styles.date}>{props.date}</Text>
@@ -33,7 +33,7 @@ const OrderItem = props => {
           ))}
         </View>
       )}
-    </View>
+    </Card>
   );
 };
 
